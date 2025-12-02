@@ -1,0 +1,57 @@
+/-window-rule {
+    match is-active=false
+    opacity 0.925
+}
+
+window-rule {
+    match app-id="Flowblade"
+    open-fullscreen true
+}
+
+window-rule {
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
+}
+
+// Take the pape, make that the overview bg
+layer-rule {
+  match namespace="^noctalia-wallpaper*" 
+  place-within-backdrop true
+}
+
+// this is the stuff behind each workspace, funny enough.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  // place-within-backdrop true
+  opacity 0.0
+}
+
+overview {
+    workspace-shadow {
+        on
+    }
+}
+
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Example: block out two password managers from screen capture.
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
