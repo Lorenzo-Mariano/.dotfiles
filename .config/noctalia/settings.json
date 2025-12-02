@@ -3,7 +3,7 @@
         "customLaunchPrefix": "ELECTRON_OZONE_PLATFORM_HINT=wayland",
         "customLaunchPrefixEnabled": false,
         "enableClipPreview": true,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "pinnedExecs": [
         ],
         "position": "center",
@@ -112,6 +112,7 @@
                     "id": "DarkMode"
                 },
                 {
+                    "deviceNativePath": "",
                     "displayMode": "onhover",
                     "id": "Battery",
                     "warningThreshold": 30
@@ -139,10 +140,12 @@
                 },
                 {
                     "colorizeDistroLogo": true,
+                    "colorizeSystemIcon": "none",
                     "customIconPath": "",
-                    "icon": "",
+                    "enableColorization": false,
+                    "icon": "niri",
                     "id": "ControlCenter",
-                    "useDistroLogo": true
+                    "useDistroLogo": false
                 }
             ]
         }
@@ -156,11 +159,11 @@
         "cards": [
             {
                 "enabled": true,
-                "id": "banner-card"
+                "id": "calendar-header-card"
             },
             {
                 "enabled": true,
-                "id": "calendar-card"
+                "id": "calendar-month-card"
             },
             {
                 "enabled": true,
@@ -180,10 +183,10 @@
         "generateTemplatesForPredefined": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "matugenSchemeType": "scheme-fruit-salad",
-        "predefinedScheme": "Rosepine",
+        "matugenSchemeType": "scheme-rainbow",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
-        "useWallpaperColors": false
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -255,7 +258,6 @@
             "zen",
             "vesktop"
         ],
-        "radiusRatio": 0.1,
         "size": 0.7000000000000001
     },
     "general": {
@@ -269,7 +271,7 @@
         "forceBlackScreenCorners": false,
         "language": "",
         "lockOnSuspend": true,
-        "radiusRatio": 0.25999999999999995,
+        "radiusRatio": 0.9,
         "scaleRatio": 0.9,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
@@ -380,16 +382,21 @@
         ],
         "showHeader": true
     },
-    "settingsVersion": 25,
+    "settingsVersion": 26,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
+        "cpuPollingInterval": 3000,
         "cpuWarningThreshold": 80,
         "criticalColor": "",
         "diskCriticalThreshold": 90,
+        "diskPollingInterval": 3000,
         "diskWarningThreshold": 80,
         "memCriticalThreshold": 90,
+        "memPollingInterval": 3000,
         "memWarningThreshold": 80,
+        "networkPollingInterval": 3000,
         "tempCriticalThreshold": 90,
+        "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
         "warningColor": ""
@@ -399,6 +406,7 @@
         "cava": true,
         "code": false,
         "discord": true,
+        "emacs": false,
         "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
@@ -406,6 +414,7 @@
         "gtk": true,
         "kcolorscheme": true,
         "kitty": true,
+        "niri": true,
         "pywalfox": false,
         "qt": true,
         "spicetify": false,
@@ -425,24 +434,13 @@
         "tooltipsEnabled": true
     },
     "wallpaper": {
-        "defaultWallpaper": "/etc/xdg/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
         "directory": "/home/nyormensho/Pictures/Anime",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#3b4252",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
-        "monitors": [
-            {
-                "directory": "/home/nyormensho/Pictures/papes",
-                "name": "eDP-1",
-                "wallpaper": "/home/nyormensho/Pictures/Anime/Henriette Ronner-Knip - Cat_at_Play.png"
-            },
-            {
-                "directory": "/home/nyormensho/Pictures",
-                "name": "HDMI-A-1",
-                "wallpaper": "/home/nyormensho/Pictures/Anime/Henriette Ronner-Knip - Cat_at_Play.png"
-            }
+        "monitorDirectories": [
         ],
         "overviewEnabled": true,
         "panelPosition": "follow_bar",
