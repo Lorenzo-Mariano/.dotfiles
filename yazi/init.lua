@@ -1,8 +1,4 @@
-require("full-border"):setup({
-	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
-	type = ui.Border.ROUNDED,
-	-- type = ui.Border.PLAIN,
-})
+require("git"):setup()
 
 require("bunny"):setup({
 	hops = {
@@ -43,4 +39,10 @@ require("bunny"):setup({
 	tabs = true, -- Enable tab hops, default is true
 	notify = true, -- Notify after hopping, default is false
 	fuzzy_cmd = "fzf", -- Fuzzy searching command, default is "fzf"
+})
+
+require("full-border"):setup({
+	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+	type = ui.Border.ROUNDED,
+	-- type = ui.Border.PLAIN,
 })

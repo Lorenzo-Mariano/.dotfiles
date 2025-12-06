@@ -5,5 +5,6 @@ prepend_keymap = [
   { on = "M", run = "plugin mount", desc = "Show mounted drives" },
   { on = "<C-n>", run = '''
   shell 'ripdrag "$@" 2>/dev/null &' --confirm
-  ''', desc = "Drag and drop selected files" }
+  ''', desc = "Drag and drop selected files" },
+  # { on = ["g", "c"], run = "plugin vcs-files", desc = "Show Git file changes"}
 ]
