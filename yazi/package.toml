@@ -1,0 +1,44 @@
+[[plugin.deps]]
+use = "stelcodes/bunny"
+rev = "7137a44"
+hash = "58bfa473bcac8574400e573787954512"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "8f1d971"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "8f1d971"
+hash = "4fccaaf10c36dc2466e2438a386ff017"
+
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "b4cc9f2"
+hash = "bef64c9478257cae6a108368979a901a"
+
+[[flavor.deps]]
+use = "PinThePenguine/sunset"
+rev = "181acd4"
+hash = "8bb1e2ba8ded5a26150e351935a58370"
+
+[[flavor.deps]]
+use = "marcosvnmelo/kanagawa-dragon"
+rev = "2ddff30"
+hash = "e65b47af7ce73e4828d5fe613e8a8c80"
+
+[[flavor.deps]]
+use = "ficcdaf/ashen:ashen"
+rev = "4d5d852"
+hash = "3f260c94639f35069a1b24b60b9e03c3"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "f9ae9f2"
+hash = "461c0f09c668a6542f5bd91dc7275ad9"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine"
+rev = "8343340"
+hash = "e2336631865c0f90276dcbc553d532fc"

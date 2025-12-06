@@ -1,0 +1,9 @@
+[mgr]
+prepend_keymap = [
+  { on = "b", run = "plugin bunny", desc = "Start bunny.yazi" },
+  { on = "'", run = "plugin bunny fuzzy", desc = "Start bunny.yazi funny search" },
+  { on = "M", run = "plugin mount", desc = "Show mounted drives" },
+  { on = "<C-n>", run = '''
+  shell 'ripdrag "$@" 2>/dev/null &' --confirm
+  ''', desc = "Drag and drop selected files" }
+]

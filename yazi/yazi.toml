@@ -1,0 +1,48 @@
+[mgr]
+ratio = [1, 2, 2]
+show_hidden = true
+linemode = "btime"
+
+[preview]
+wrap = "yes"
+
+[opener]
+run = [{ run = 'setsid "$@"', orphan = true }]
+write = [{ run = 'soffice "$@"', orphan = true }]
+watch = [{ run = 'showtime "$@"', orphan = true }]
+view = [{ run = 'loupe "$@"', orphan = true }]
+listen = [{ run = 'decibels "$@"', orphan = true }]
+read = [
+  { run = 'papers "$@"', orphan = true },
+  { run = 'foliate "$@"', orphan = true }
+]
+
+[open]
+prepend_rules = [
+  # running guis n shi
+  { name = "*.AppImage", use = "run" },
+  # pics
+  { name = "*.jpg", use = "view" },
+  { name = "*.jpeg", use = "view" },
+  { name = "*.png", use = "view" },
+  { name = "*.webp", use = "view" },
+  # audio
+  { name = "*.aac", use = "listen" },
+  { name = "*.mp3", use = "listen" },
+  { name = "*.m4a", use = "listen" },
+  { name = "*.wav", use = "listen" },
+  { name = "*.ogg", use = "listen" },
+  # Vids
+  { name = "*.mp4", use = "watch" },
+  { name = "*.mkv", use = "watch" },
+  { name = "*.webp", use = "watch" },
+  { name = "*.avi", use = "watch" },
+  # docs
+  { name = "*.pdf", use = "read" },
+  { name = "*.epub", use = "read" },
+  { name = "*.docx", use = "write" },
+  { name = "*.odt", use = "write" },
+
+  # Multiple openers for a single rule
+  # { name = "*.html", use = [ "open", "edit" ] },
+]

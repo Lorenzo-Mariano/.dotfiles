@@ -1,0 +1,33 @@
+[flavor]
+# calli-pink
+# dark = "ashen"
+# dark = "rose-pine"
+
+# furina-blue
+# dark = "catppuccin-mocha"
+
+# ol' reliable
+# dark = "gruvbox-dark"
+# dark = "sunset"
+# dark = "kanagawa-dragon"
+
+# Make the mode part of the status bar visually inoffensive
+# no matter the theme. That's the idea anyway, lol.
+[mgr]
+count_cut = { fg = "#b4b4b4", bg = "#3a3a3a" }
+count_copied = { fg = "#b4b4b4", bg = "#3a3a3a" }
+count_selected = { fg = "#b4b4b4", bg = "#3a3a3a" }
+
+[tabs]
+active = { fg = "#b4b4b4", bg = "#3a3a3a", bold = true }
+inactive = { fg = "#3a3a3a", bg = "#212121" }
+
+[mode]
+normal_main = { fg = "#b4b4b4", bg = "#3a3a3a", bold = true }
+normal_alt = { fg = "#b4b4b4", bg = "#212121" }
+
+select_main = { fg = "#b4b4b4", bg = "#3a3a3a", bold = true }
+select_alt = { fg = "#b4b4b4", bg = "#212121" }
+
+unset_main = { fg = "#b4b4b4", bg = "#3a3a3a", bold = true }
+unset_alt = { fg = "#b4b4b4", bg = "#212121" }
