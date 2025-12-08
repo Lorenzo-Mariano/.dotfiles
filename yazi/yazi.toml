@@ -2,9 +2,13 @@
 ratio = [1, 2, 2]
 show_hidden = true
 linemode = "btime"
+show_symlink = false
 
 [preview]
 wrap = "yes"
+max_width = 9000
+max_height = 9000
+image_quality = 50
 
 [opener]
 run = [{ run = 'setsid "$@"', orphan = true }]
