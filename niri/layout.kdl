@@ -1,6 +1,6 @@
 layout {
     background-color "rgba(0,0,0,0.0)"
-    gaps 8
+    gaps 14
     center-focused-column "on-overflow"
     //default-column-width { 1.0; }
 
