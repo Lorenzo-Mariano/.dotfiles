@@ -1,11 +1,12 @@
 return {
 	{
 		"tribela/transparent.nvim",
-		-- cmd = { "TransparentToggle", "TransparentEnable", "TransparentDisable" },
-		config = true,
 		opts = {
 			extra_groups = { "WinSeparator", "FoldColumn" },
 		},
+		config = function()
+			vim.api.nvim_set_keymap("n", "<leader>tt", ":TransparentToggle<CR>", { noremap = true, silent = true })
+		end,
 	},
 	{
 		"tinted-theming/tinted-vim",

@@ -147,6 +147,13 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+		config = function()
+			vim.api.nvim_set_keymap("n", "<leader>md", ":RenderMarkdown toggle<CR>", { noremap = true, silent = true })
+		end,
+	},
 	-- {
 	-- 	"mrcjkb/rustaceanvim",
 	-- 	version = "^6", -- Recommended
