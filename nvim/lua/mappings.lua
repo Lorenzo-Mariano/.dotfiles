@@ -4,8 +4,8 @@ vim.g.maplocalleader = " "
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
--- Alt + S to save file
-map("n", "<M-s>", ":w<CR>", opts)
+-- Ctrl + S to save file
+map("n", "<C-s>", ":wa<CR>", opts)
 
 -- Hit ge to show the lsp error
 -- There is no keybind for this by default.

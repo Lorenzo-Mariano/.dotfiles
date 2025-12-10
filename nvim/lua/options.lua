@@ -51,3 +51,6 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- Same thing but breaks to a virtual line below.
 -- vim.diagnostic.config({ virtual_lines = true })
+
+-- Some themes want this. Also, not sure I ever want light.
+vim.opt.background = "dark"

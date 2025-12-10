@@ -27,10 +27,13 @@ require("lazy").setup({
 		require("plugins.utils"),
 		require("plugins.themes"),
 	},
-	install = { colorscheme = { "habamax" } },
+	install = { colorscheme = { "nord" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
 
 require("mappings")
 require("options")
+
+-- Choose your theme here.
+vim.cmd.colorscheme("rose-pine")

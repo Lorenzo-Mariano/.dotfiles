@@ -114,8 +114,20 @@ return {
 		tag = "v0.1.9",
 		cmd = "Telescope",
 		lazy = false,
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("telescope").setup({
+			local telescope = require("telescope")
+			local builtin = require("telescope.builtin")
+
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+			vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Telescope live grep" })
+			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+			vim.keymap.set("n", "<leader>th", builtin.colorscheme, { desc = "Telescope themes" })
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+			vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Telescope marks" })
+
+			telescope.load_extension("ui-select")
+			telescope.setup({
 				defaults = {
 					layout_strategy = "horizontal",
 					layout_config = {
@@ -124,27 +136,15 @@ return {
 					},
 				},
 			})
-
-			require("telescope").load_extension("ui-select")
-
-			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-			vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Telescope live grep" })
-			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-			vim.keymap.set("n", "<leader>th", builtin.colorscheme, { desc = "Telescope select theme" })
-			vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Telescope marks" })
 		end,
-		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		opts = {
-			-- shell = "pwsh -nologo",
 			shell = "bash",
 			direction = "float",
-			open_mapping = "<A-\\>",
+			open_mapping = "<A-f>",
 		},
 	},
 	{
