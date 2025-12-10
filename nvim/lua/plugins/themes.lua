@@ -51,7 +51,10 @@ return {
 					"FoldColumn",
 				},
 			})
-			vim.api.nvim_set_keymap("n", "<leader>tt", ":TransparentToggle<CR>", { noremap = true, silent = true })
+			vim.api.nvim_set_keymap("n", "<leader>tt", ":TransparentToggle<CR>", {
+				noremap = true,
+				silent = true,
+			})
 		end,
 	},
 }
