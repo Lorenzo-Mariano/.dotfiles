@@ -100,8 +100,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Moving workspaces
-    Mod+Shift+U         { move-workspace-to-monitor-left; }
-    Mod+Shift+P         { move-workspace-to-monitor-right; }
+    Mod+Shift+U hotkey-overlay-title="Move workspace to monitor left"  { move-workspace-to-monitor-left; }
+    Mod+Shift+P hotkey-overlay-title="Move workspace to monitor right" { move-workspace-to-monitor-right; }
     Mod+Shift+I         { move-workspace-down; }
     Mod+Shift+O         { move-workspace-up; }
 

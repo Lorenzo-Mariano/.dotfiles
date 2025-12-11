@@ -7,6 +7,7 @@
         "pinnedExecs": [
         ],
         "position": "center",
+        "showCategories": true,
         "sortByMostUsed": true,
         "terminalCommand": "kitty",
         "useApp2Unit": true,
@@ -24,13 +25,13 @@
         "volumeStep": 2
     },
     "bar": {
-        "backgroundOpacity": 0.9,
+        "backgroundOpacity": 0.61,
         "capsuleOpacity": 1,
-        "density": "compact",
+        "density": "default",
         "exclusive": true,
         "floating": true,
-        "marginHorizontal": 0.75,
-        "marginVertical": 0.75,
+        "marginHorizontal": 0.7000000000000001,
+        "marginVertical": 0.5,
         "monitors": [
         ],
         "outerCorners": false,
@@ -115,6 +116,8 @@
                     "deviceNativePath": "",
                     "displayMode": "onhover",
                     "id": "Battery",
+                    "showNoctaliaPerformance": false,
+                    "showPowerProfiles": false,
                     "warningThreshold": 30
                 },
                 {
@@ -132,7 +135,7 @@
                 },
                 {
                     "customFont": "Iosevka",
-                    "formatHorizontal": "h:mm AP - MMM dd, dddd",
+                    "formatHorizontal": "h:mm:ss AP - MMM dd, dddd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "useCustomFont": true,
@@ -175,16 +178,13 @@
             }
         ]
     },
-    "changelog": {
-        "lastSeenVersion": ""
-    },
     "colorSchemes": {
         "darkMode": true,
         "generateTemplatesForPredefined": true,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-rainbow",
-        "predefinedScheme": "Rose Pine",
+        "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
         "useWallpaperColors": true
     },
@@ -246,9 +246,11 @@
     "dock": {
         "backgroundOpacity": 1,
         "colorizeIcons": false,
+        "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "enabled": false,
         "floatingRatio": 1.02,
+        "inactiveIndicators": false,
         "monitors": [
             "eDP-1",
             "HDMI-A-1"
@@ -258,6 +260,7 @@
             "zen",
             "vesktop"
         ],
+        "pinnedStatic": false,
         "size": 0.7000000000000001
     },
     "general": {
@@ -265,10 +268,12 @@
         "animationDisabled": false,
         "animationSpeed": 1.5,
         "avatarImage": "/home/nyormensho/Pictures/Anime/MYAO - beautiful face hoshimachi suisei supernova 134844072_p0.png",
+        "boxRadiusRatio": 1,
         "compactLockScreen": false,
         "dimmerOpacity": 0,
-        "enableShadows": false,
+        "enableShadows": true,
         "forceBlackScreenCorners": false,
+        "iRadiusRatio": 1,
         "language": "",
         "lockOnSuspend": true,
         "radiusRatio": 0.35000000000000003,
@@ -278,7 +283,8 @@
         "shadowOffsetX": 2,
         "shadowOffsetY": 3,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false
+        "showScreenCorners": false,
+        "showSessionButtonsOnLockScreen": true
     },
     "hooks": {
         "darkModeChange": "",
@@ -320,7 +326,16 @@
         ],
         "normalUrgencyDuration": 8,
         "overlayLayer": true,
-        "respectExpireTimeout": false
+        "respectExpireTimeout": false,
+        "sounds": {
+            "criticalSoundFile": "",
+            "enabled": false,
+            "excludedApps": "discord,firefox,chrome,chromium,edge",
+            "lowSoundFile": "",
+            "normalSoundFile": "",
+            "separateSounds": false,
+            "volume": 0.5
+        }
     },
     "osd": {
         "autoHideMs": 2000,
@@ -424,10 +439,10 @@
         "wezterm": false
     },
     "ui": {
-        "fontDefault": "Inter Light",
-        "fontDefaultScale": 1,
+        "fontDefault": "Roboto Light",
+        "fontDefaultScale": 1.1,
         "fontFixed": "JetBrainsMono Nerd Font",
-        "fontFixedScale": 1.05,
+        "fontFixedScale": 1,
         "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelAttachToBar": false,
@@ -447,7 +462,7 @@
         "randomEnabled": false,
         "randomIntervalSec": 300,
         "recursiveSearch": true,
-        "setWallpaperOnAllMonitors": false,
+        "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1000,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "disc",

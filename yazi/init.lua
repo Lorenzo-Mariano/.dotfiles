@@ -23,6 +23,8 @@ require("bunny"):setup({
 		{ key = { "p", "a" }, path = "~/Pictures/Anime", desc = "Anime Pics" },
 		{ key = { "p", "s" }, path = "~/Pictures/Screenshots", desc = "Screenshots" },
 
+		{ key = { "m", "m" }, path = "~/Music", desc = "Music" },
+
 		{ key = { "v", "v" }, path = "~/Videos", desc = "Videos" },
 
 		{ key = { "c", "c" }, path = "~/.config", desc = "Config Files" },
