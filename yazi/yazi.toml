@@ -36,10 +36,11 @@ prepend_rules = [
   { name = "*.m4a", use = "listen" },
   { name = "*.wav", use = "listen" },
   { name = "*.ogg", use = "listen" },
+  { name = "*.flac", use = "listen" },
   # Vids
   { name = "*.mp4", use = "watch" },
   { name = "*.mkv", use = "watch" },
-  { name = "*.webp", use = "watch" },
+  { name = "*.webm", use = "watch" },
   { name = "*.avi", use = "watch" },
   # docs
   { name = "*.pdf", use = "read" },
