@@ -9,7 +9,8 @@
 # launcher script. Happy ricing!
 
 dir="$HOME/.config/rofi/"
-theme='calli-pink'
+# theme='calli-pink'
+theme='yae-miko'
 
 ## Run
 rofi \
