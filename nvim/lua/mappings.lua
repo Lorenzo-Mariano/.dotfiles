@@ -19,3 +19,7 @@ vim.api.nvim_set_keymap("n", "yy", '"+yy', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>bd", ":bd<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>h", ":bp<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>l", ":bn<CR>", { noremap = true, silent = true })
+
+-- Resizing nicely
+vim.api.nvim_set_keymap("n", "<leader>r", ":resize ", { noremap = true, silent = false })
+vim.api.nvim_set_keymap("n", "<leader>vr", ":vertical-resize ", { noremap = true, silent = false })
