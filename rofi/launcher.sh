@@ -10,7 +10,8 @@
 
 dir="$HOME/.config/rofi/"
 # theme='calli-pink'
-theme='yae-miko'
+# theme='yae-miko'
+theme='bocchi'
 
 ## Run
 rofi \
