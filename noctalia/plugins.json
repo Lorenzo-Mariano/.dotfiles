@@ -7,6 +7,9 @@
         }
     ],
     "states": {
+        "mangowc-layout-switcher": {
+            "enabled": true
+        }
     },
     "version": 1
 }
