@@ -11,10 +11,10 @@
 dir="$HOME/.config/rofi/"
 # theme='calli-pink'
 # theme='yae-miko'
-theme='bocchi'
+theme='bocchi-light'
+# theme='bocchi-dark'
 
 ## Run
 rofi \
     -show drun \
-    -theme ${dir}/${theme}.rasi \
-    -disable-history
+    -theme ${dir}/${theme}.rasi
