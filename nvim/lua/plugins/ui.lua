@@ -96,6 +96,13 @@ return {
 				show_help = "<f1>",
 			},
 		},
+		init = function()
+			vim.api.nvim_create_autocmd("VimEnter", {
+				callback = function()
+					vim.cmd("Yazi toggle")
+				end,
+			})
+		end,
 	},
 	{
 		"folke/which-key.nvim",
