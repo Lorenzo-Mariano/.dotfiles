@@ -3,6 +3,7 @@ return {
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "akinsho/horizon.nvim", version = "*" },
 	{ "gbprod/nord.nvim" },
+	{ "rebelot/kanagawa.nvim" },
 	{ "sainnhe/gruvbox-material" },
 	{
 		"anAcc22/sakura.nvim",
