@@ -11,8 +11,9 @@
 dir="$HOME/.config/rofi/"
 # theme='calli-pink'
 # theme='yae-miko'
-theme='bocchi-light'
+# theme='bocchi-light'
 # theme='bocchi-dark'
+theme='monochrome'
 
 ## Run
 rofi \
