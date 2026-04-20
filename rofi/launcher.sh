@@ -17,8 +17,10 @@ dir="$HOME/.config/rofi/"
 # theme='bocchi-light'
 # theme='bocchi-dark'
 # theme='monochrome'
-theme='famine'
+# theme='nord-reze'
+# theme='famine'
 # theme='gruvbox'
+theme='wallust'
 
 ## Run
 rofi \
