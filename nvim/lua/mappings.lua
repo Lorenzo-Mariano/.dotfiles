@@ -4,8 +4,12 @@ vim.g.maplocalleader = " "
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+-- Unhighlight
+map("n", "<Esc>", ":noh<CR>", opts)
+
 -- Ctrl + S to save file
 map("n", "<C-s>", ":wa<CR>", opts)
+map("i", "<C-s>", "<ESC>:wa<CR>", opts)
 
 -- Hit ge to show the lsp error
 -- There is no keybind for this by default.
@@ -22,4 +26,4 @@ vim.api.nvim_set_keymap("n", "<leader>l", ":bn<CR>", { noremap = true, silent = 
 
 -- Resizing nicely
 vim.api.nvim_set_keymap("n", "<leader>r", ":resize ", { noremap = true, silent = false })
-vim.api.nvim_set_keymap("n", "<leader>vr", ":vertical-resize ", { noremap = true, silent = false })
+vim.api.nvim_set_keymap("n", "<leader>vr", ":vertical resize ", { noremap = true, silent = false })

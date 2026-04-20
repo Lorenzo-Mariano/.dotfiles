@@ -6,6 +6,13 @@ return {
 	{ "rebelot/kanagawa.nvim" },
 	{ "sainnhe/gruvbox-material" },
 	{
+		"amedoeyes/eyes.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
 		"anAcc22/sakura.nvim",
 		dependencies = "rktjmp/lush.nvim",
 	},
@@ -21,28 +28,26 @@ return {
 	{
 		"everviolet/nvim",
 		name = "evergarden",
-		config = function()
-			require("evergarden").setup({
-				theme = {
-					variant = "winter",
-					-- this mostly changes stuff in lualine.
-					-- green looks good, or a color that complements it.
-					-- accent = "brown",
+		opts = {
+			theme = {
+				variant = "winter",
+				-- this mostly changes stuff in lualine.
+				-- green looks good, or a color that complements it.
+				-- accent = "brown",
+			},
+			editor = {
+				-- woah this actually works
+				-- transparent_background = true,
+				sign = { color = "none" },
+				float = {
+					color = "mantle",
+					invert_border = false,
 				},
-				editor = {
-					-- woah this actually works
-					-- transparent_background = true,
-					sign = { color = "none" },
-					float = {
-						color = "mantle",
-						invert_border = false,
-					},
-					completion = {
-						color = "surface0",
-					},
+				completion = {
+					color = "surface0",
 				},
-			})
-		end,
+			},
+		},
 	},
 	{
 		"xiyaowong/transparent.nvim",

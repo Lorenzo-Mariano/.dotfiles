@@ -1,9 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
+		opts = {},
 	},
 	{
 		"razak17/tailwind-fold.nvim",
@@ -14,18 +12,16 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
-		config = function()
-			require("copilot").setup({
-				filetypes = {
-					sh = function()
-						if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
-							return false
-						end
-						return true
-					end,
-				},
-			})
-		end,
+		opts = {
+			filetypes = {
+				sh = function()
+					if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
+						return false
+					end
+					return true
+				end,
+			},
+		},
 	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
@@ -180,14 +176,12 @@ return {
 		opts = {
 			shell = "bash",
 			direction = "float",
-			open_mapping = "<A-f>",
+			open_mapping = "<C-q>",
 		},
 	},
 	{
 		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
+		opts = {},
 	},
 	{
 		"akinsho/git-conflict.nvim",

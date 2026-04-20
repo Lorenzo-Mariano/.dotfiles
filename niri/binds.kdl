@@ -24,7 +24,8 @@ binds {
 
     // System Controls
     Mod+SemiColon hotkey-overlay-title="Open noctalia settings" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    Mod+Space hotkey-overlay-title="Open noctalia launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    // Mod+Space hotkey-overlay-title="Open noctalia launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Space hotkey-overlay-title="Open rofi launcher" { spawn "~/.config/rofi/launcher.sh"; }
     Mod+Grave hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
     // Media Controls

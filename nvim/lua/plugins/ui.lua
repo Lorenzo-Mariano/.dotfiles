@@ -99,7 +99,9 @@ return {
 		init = function()
 			vim.api.nvim_create_autocmd("VimEnter", {
 				callback = function()
-					vim.cmd("Yazi toggle")
+					if vim.fn.argc() == 0 then
+						vim.cmd("Yazi toggle")
+					end
 				end,
 			})
 		end,
@@ -120,13 +122,18 @@ return {
 	},
 	{
 		"karb94/neoscroll.nvim",
-		config = function()
-			require("neoscroll").setup({
-				mappings = { "<C-u>", "<C-d>" },
-				duration_multiplier = 0.5,
-				easing = "quadratic",
-			})
-		end,
+		opts = {
+			mappings = { "<C-u>", "<C-d>" },
+			duration_multiplier = 0.5,
+			easing = "quadratic",
+		},
+		-- config = function()
+		-- 	require("neoscroll").setup({
+		-- 		mappings = { "<C-u>", "<C-d>" },
+		-- 		duration_multiplier = 0.5,
+		-- 		easing = "quadratic",
+		-- 	})
+		-- end,
 	},
 	{
 		"folke/noice.nvim",

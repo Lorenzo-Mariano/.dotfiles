@@ -1,25 +1,26 @@
 // apparently this is pretty nice with niri out the box
 spawn-at-startup "qs" "-c" "noctalia-shell"
+
+prefer-no-csd
+
 hotkey-overlay {
     skip-at-startup
 }
 
-
 output "eDP-1" {
     // off
     scale 1.2
+    // scale 1.0
 }
 
 output "Hewlett Packard HP P201 6CM4320ZW3" {
     // scale 0.8333333
 }
 
-
 animations {
     // off
-    slowdown 0.8
+    slowdown 1.35
 }
-prefer-no-csd
 
 // The path is formatted with strftime(3) to give you the screenshot date and time.
 // screenshot-path null

@@ -1,0 +1,32 @@
+{
+  "activeBackend": "qt6-multimedia",
+  "automationMode": "random",
+  "automationTime": 300,
+  "fillMode": "fit",
+  "mpvSocket": "/tmp/mpv-socket",
+  "profile": "default",
+  "volume": 1,
+  "wallpapersFolder": "/home/nyormensho/Pictures/Anime",
+  "thumbCacheReady": true,
+  "eDP-1": {
+    "volume": 0.15,
+    "currentWallpaper": "",
+    "automation": false,
+    "automationMode": "random",
+    "automationTime": 300,
+    "hardwareAcceleration": false,
+    "profile": "default",
+    "fillMode": "",
+    "orientation": 0,
+    "noctaliaWallpaper": "/home/nyormensho/Pictures/Anime/chahu paopao - wuthering waves iuno moon 135311243_p0.jpg",
+    "isPlaying": true
+  },
+  "enabled": false,
+  "monitorSpecific": true,
+  "automationCustomTime": [],
+  "HDMI-A-1": {
+    "currentWallpaper": "",
+    "noctaliaWallpaper": "/home/nyormensho/Pictures/Anime/chahu paopao - wuthering waves iuno moon 135311243_p0.jpg",
+    "isPlaying": true
+  }
+}

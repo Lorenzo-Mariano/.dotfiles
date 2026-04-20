@@ -10,6 +10,7 @@ require("bunny"):setup({
 		{ key = { "d", "v" }, path = "~/dev", desc = "Developer" },
 		{ key = { "r", "s" }, path = "~/dev/rust-stuff", desc = "Rust Projects" },
 		{ key = { "r", "l" }, path = "~/dev/rust-stuff/rustlings", desc = "Rustlings" },
+		{ key = { "r", "n" }, path = "~/Documents/Reader's Notebook", desc = "Reader's Notebook" },
 
 		{ key = { "o" }, path = "~/.local/share/osu", desc = "osu!" },
 
@@ -17,24 +18,30 @@ require("bunny"):setup({
 		{ key = { "d", "b" }, path = "~/Documents/Books", desc = "Books" },
 		{ key = { "d", "d" }, path = "~/Documents/Diary", desc = "Diary" },
 		{ key = { "d", "l" }, path = "~/Downloads", desc = "Downloads" },
+		{ key = { "d", "t" }, path = "~/.dotfiles", desc = "Dotfiles" },
 
 		{ key = { "p", "p" }, path = "~/Pictures", desc = "Pictures" },
 		{ key = { "p", "i" }, path = "~/Pictures/Instagram", desc = "Insta Brainrot" },
 		{ key = { "p", "a" }, path = "~/Pictures/Anime", desc = "Anime Pics" },
+		{ key = { "p", "c" }, path = "~/Pictures/Cath Stuff", desc = "Cath Stuff" },
 		{ key = { "p", "s" }, path = "~/Pictures/Screenshots", desc = "Screenshots" },
 
 		{ key = { "m", "m" }, path = "~/Music", desc = "Music" },
 
 		{ key = { "v", "v" }, path = "~/Videos", desc = "Videos" },
+		{ key = { "v", "d" }, path = "~/Videos/yt-dlp", desc = "yt-dlp vids" },
+		{ key = { "v", "y" }, path = "~/Videos/YouTube", desc = "YouTube" },
 
 		{ key = { "c", "c" }, path = "~/.config", desc = "Config Files" },
 		{ key = { "c", "y" }, path = "~/.config/yazi", desc = "Yazi Config" },
+		{ key = { "c", "r" }, path = "~/.config/rofi", desc = "Rofi Config" },
+		{ key = { "c", "h" }, path = "~/.config/hypr", desc = "Hypr Config" },
 		{ key = { "c", "n", "r" }, path = "~/.config/niri", desc = "Niri Config" },
 		{ key = { "c", "n", "v" }, path = "~/.config/nvim", desc = "Neovim Config" },
 
-		-- { key = { "l", "s" }, path = "~/.local/share", desc = "Local share" },
-		-- { key = { "l", "b" }, path = "~/.local/bin", desc = "Local bin" },
-		-- { key = { "l", "t" }, path = "~/.local/state", desc = "Local state" },
+		{ key = { "l", "s" }, path = "~/.local/share", desc = "Local share" },
+		{ key = { "l", "b" }, path = "~/.local/bin", desc = "Local bin" },
+		{ key = { "l", "t" }, path = "~/.local/state", desc = "Local state" },
 	},
 	desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"
 	ephemeral = true, -- Enable ephemeral hops, default is true
