@@ -1,0 +1,218 @@
+/**
+ * @name Wallust Midnight Vesktop
+ * @description Noctalia Midnight adapted to Wallust palette system
+ */
+
+
+/* 
+    btw this is still quite bad. I'm missing a lot of stuff 
+    like making icons more easily visible, there is no discord
+    icon in the top left, text that is supposed to be subtle is
+    actually wayyy too subtle to be seen and probably more. tbh
+    it might be more helpful to watch an actual tutorial on this.
+*/
+
+/* import base theme */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+
+  /* =========================
+     FONT / LAYOUT (unchanged)
+     ========================= */
+  --font: '';
+  --code-font: '';
+  font-weight: 400;
+
+  --gap: 12px;
+  --divider-thickness: 4px;
+  --border-thickness: 1px;
+
+  --animations: on;
+  --list-item-transition: 0.2s ease;
+  --dms-icon-svg-transition: 0.4s ease;
+  --border-hover-transition: 0.2s ease;
+
+  --top-bar-height: var(--gap);
+  --top-bar-button-position: titlebar;
+  --top-bar-title-position: off;
+  --subtle-top-bar-title: off;
+
+  --custom-window-controls: on;
+  --window-control-size: 14px;
+
+  --custom-dms-icon: custom;
+  --dms-icon-svg-url: url(''); /* unchanged */
+  --dms-icon-svg-size: 90%;
+
+  --custom-dms-background: off;
+  --dms-background-image-url: url('');
+  --dms-background-color: linear-gradient(70deg, var(--accent-1), var(--accent-3));
+
+  --background-image: off;
+  --background-image-url: url('');
+
+  --transparency-tweaks: off;
+  --remove-bg-layer: off;
+  --panel-blur: off;
+  --blur-amount: 12px;
+  --bg-floating: var(--bg-3);
+
+  --custom-chatbar: separated;
+  --chatbar-height: 56px;
+
+  --small-user-panel: off;
+}
+
+/* =========================
+   WALLUST → NOCTALIA COLOR SYSTEM
+   ========================= */
+
+:root {
+
+  /* =========================
+     TEXT SYSTEM (FIXED SEMANTICS)
+     ========================= */
+
+  --text-0: {{foreground}}; /* text on accent */
+  --text-1: {{foreground}}; /* primary text */
+  --text-2: {{foreground}}; /* headings */
+  --text-3: color-mix(in srgb, {{foreground}} 85%, {{background}});
+  --text-4: {{color8}}; /* muted icons */
+  --text-5: {{color8}}; /* timestamps / disabled */
+
+  /* =========================
+     BACKGROUND SYSTEM (FIXED HIERARCHY)
+     ========================= */
+
+  --bg-1: {{color0}}; /* deepest UI elements */
+  --bg-2: {{color0}};
+  --bg-3: {{color8}}; /* panels / elevated surfaces */
+  --bg-4: {{background}}; /* app base */
+
+  --hover: color-mix(in srgb, {{color0}} 20%, transparent);
+  --active: {{color4}};
+  --active-2: {{color0}};
+  --message-hover: color-mix(in srgb, {{color4}} 10%, transparent);
+
+  /* =========================
+     ACCENT SYSTEM (FIXED)
+     ========================= */
+
+  --accent-1: {{color4}}; /* primary */
+  --accent-2: {{color5}};
+  --accent-3: {{color4}};
+  --accent-4: {{color5}};
+  --accent-5: {{color5}};
+  --accent-new: {{color5}};
+
+  /* =========================
+     BACKGROUND FEATURES
+     ========================= */
+
+  --mention: linear-gradient(
+    to right,
+    color-mix(in srgb, {{color4}} 10%, transparent) 40%,
+    transparent
+  );
+
+  --mention-hover: linear-gradient(
+    to right,
+    color-mix(in srgb, {{color4}} 6%, transparent) 40%,
+    transparent
+  );
+
+  --reply: linear-gradient(
+    to right,
+    color-mix(in srgb, {{color5}} 10%, transparent) 40%,
+    transparent
+  );
+
+  --reply-hover: linear-gradient(
+    to right,
+    color-mix(in srgb, {{color5}} 6%, transparent) 40%,
+    transparent
+  );
+
+  /* =========================
+     STATUS COLORS (UNCHANGED LOGIC)
+     ========================= */
+
+  --online: var(--green-2);
+  --dnd: var(--red-2);
+  --idle: var(--yellow-2);
+  --streaming: var(--purple-2);
+  --offline: var(--text-4);
+
+  /* =========================
+     BORDERS (FIXED CONSISTENCY)
+     ========================= */
+
+  --border-light: var(--bg-2);
+  --border: var(--bg-3);
+  --border-hover: var(--accent-1);
+  --button-border: color-mix(in srgb, {{foreground}} 10%, transparent);
+}
+
+/* =========================
+   DM SIDEBAR TEXT COLOR FIX
+   ========================= */
+
+/* DM list items (usernames + channels) */
+[class*="channel_"],
+[class*="interactive_"] {
+  color: var(--text-3) !important;
+}
+
+/* Hover state */
+[class*="channel_"]:hover,
+[class*="interactive_"]:hover {
+  color: var(--text-1) !important;
+}
+
+/* Selected DM */
+[class*="channel_"][class*="selected_"],
+[class*="interactive_"][class*="selected_"] {
+  color: var(--accent-1) !important;
+}
+
+/* Friend list usernames (sometimes separate container) */
+[class*="name_"],
+[class*="title_"] {
+  color: var(--text-3) !important;
+}
+
+/* Unread DMs */
+[class*="unread_"] {
+  color: var(--text-1) !important;
+  font-weight: 600;
+}
+
+/* =========================
+   ACTIVE DM / CHANNEL FIX
+   ========================= */
+
+/* Active DM / selected channel container */
+[class*="channel_"][class*="selected_"],
+[class*="interactive_"][class*="selected_"] {
+  color: var(--text-1) !important;
+  background-color: color-mix(in srgb, var(--bg-3) 70%, var(--accent-1) 10%) !important;
+}
+
+/* Username / channel name inside active DM */
+[class*="selected_"] [class*="name_"],
+[class*="selected_"] [class*="title_"] {
+  color: var(--text-1) !important;
+}
+
+/* Secondary text (last message preview, timestamps) */
+[class*="selected_"] [class*="subText_"],
+[class*="selected_"] time {
+  color: var(--text-3) !important;
+}
+
+/* Fix unread + active overlap cases */
+[class*="selected_"] [class*="overflow_"],
+[class*="selected_"] [class*="content_"] {
+  color: var(--text-1) !important;
+}
