@@ -41,6 +41,7 @@
 #navigator-toolbox,
 #zen-tabbox-wrapper,
 #TabsToolbar,
+#zen-appcontent-navbar-container,
 #titlebar {
   background: var(--base) !important;
   color: var(--text) !important;
@@ -65,8 +66,7 @@
 }
 
 /* Workspaces / Zen UI blocks */
-#zen-workspaces-button,
-#zen-appcontent-navbar-container {
+#zen-workspaces-button {
   background: var(--surface) !important;
   color: var(--text) !important;
 }
@@ -82,12 +82,17 @@
 }
 
 .tabbrowser-tab:hover {
-  background: var(--overlay) !important;
+  background: none !important;
+  border-radius: 2px;
 }
 
 .tabbrowser-tab[selected="true"] {
   background: var(--base) !important;
   color: var(--text) !important;
+}
+
+.tab-background {
+  outline: none !important;
 }
 
 /* =========================
