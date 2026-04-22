@@ -4,7 +4,12 @@ return {
 	{ "akinsho/horizon.nvim", version = "*" },
 	{ "gbprod/nord.nvim" },
 	{ "rebelot/kanagawa.nvim" },
-	{ "sainnhe/gruvbox-material" },
+	{
+		"sainnhe/gruvbox-material",
+		config = function()
+			vim.g.gruvbox_material_background = "hard"
+		end,
+	},
 	{
 		"amedoeyes/eyes.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
