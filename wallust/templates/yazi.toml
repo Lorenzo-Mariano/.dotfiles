@@ -1,0 +1,74 @@
+# : Manager [[[
+
+[mgr]
+cwd = { fg = '{{foreground}}' }
+
+# Find
+find_keyword = { fg = '{{color1}}', bold = true, italic = true, underline = true }
+find_position = { fg = '{{color1}}', bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = '{{color6}}', bg = '{{color6}}' }
+marker_cut = { fg = '{{color6}}', bg = '{{color6}}' }
+marker_marked = { fg = '{{color1}}', bg = '{{color1}}' }
+marker_selected = { fg = '{{color5}}', bg = '{{color5}}' }
+
+# Count
+count_copied = { fg = '{{background}}', bg = '{{color6}}' }
+count_cut = { fg = '{{background}}', bg = '{{color6}}' }
+count_selected = { fg = '{{background}}', bg = '{{color5}}' }
+
+# Border
+border_style = { fg = '{{color4}}' }
+
+# : ]]]
+
+# : Status [[[
+
+[status]
+overall = { fg = '{{color4}}' }
+
+progress_normal = { fg = '{{color4}}', bg = '{{background}}' }
+progress_error = { fg = '{{color1}}', bg = '{{background}}' }
+
+# : ]]]
+
+# : Mode [[[
+
+[mode]
+normal_main = { bg = '{{color4}}', fg = '{{background}}', bold = true }
+normal_alt = { bg = '{{color8}}', fg = '{{foreground}}' }
+
+select_main = { bg = '{{color5}}', fg = '{{background}}', bold = true }
+select_alt = { bg = '{{color8}}', fg = '{{foreground}}' }
+
+unset_main = { bg = '{{color6}}', fg = '{{background}}', bold = true }
+unset_alt = { bg = '{{color8}}', fg = '{{foreground}}' }
+
+# : ]]]
+
+# : Input [[[
+
+[input]
+border = { fg = '{{color4}}' }
+value = { fg = '{{foreground}}' }
+
+# : ]]]
+
+# : Tabs [[[
+
+[tabs]
+active = { fg = '{{background}}', bg = '{{color5}}', bold = true }
+inactive = { fg = '{{color5}}', bg = '{{background}}' }
+
+# : ]]]
+
+# : Which [[[
+
+[which]
+mask = { bg = '{{background}}' }
+cand = { fg = '{{color4}}' }
+rest = { fg = '{{foreground}}' }
+desc = { fg = '{{foreground}}' }
+
+# : ]]]
