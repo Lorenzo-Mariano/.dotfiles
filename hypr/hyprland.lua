@@ -1,0 +1,11 @@
+require("config/looks")
+require("config/binds")
+require("config/input")
+require("config/monitors")
+-- require("noctalia/main")
+require("wayle/main")
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+	hl.exec_cmd("otd-daemon")
+end)
