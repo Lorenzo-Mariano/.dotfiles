@@ -3,12 +3,12 @@ return {
 		"williamboman/mason.nvim",
 		opts = {},
 	},
-	{
-		"razak17/tailwind-fold.nvim",
-		opts = {},
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
-	},
+	-- {
+	-- 	"razak17/tailwind-fold.nvim",
+	-- 	opts = {},
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	-- 	ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
+	-- },
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
@@ -209,5 +209,15 @@ return {
 		config = function()
 			require("blame").setup({})
 		end,
+	},
+	{
+		"OlegGulevskyy/better-ts-errors.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		config = {
+			keymaps = {
+				toggle = "<leader>dd", -- default '<leader>dd'
+				go_to_definition = "<leader>dx", -- default '<leader>dx'
+			},
+		},
 	},
 }

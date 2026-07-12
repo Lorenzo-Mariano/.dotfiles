@@ -1,16 +1,7 @@
 return {
 	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			-- I FINALLY FIGURED IT OUT!!!
-			-- TURNS OUT THE SYNTAX HIGHLIGHTING WAS ALWAYS WONKY BECAUSE
-			-- IT WAS NEVER FUNKING ON WHEN I HTOUGHT IT WAS!!!!
-			vim.cmd("TSEnable highlight")
-		end,
-	},
-	{
-		"numToStr/Comment.nvim",
+		"romus204/tree-sitter-manager.nvim",
+		dependencies = {}, -- tree-sitter CLI must be installed system-wide
 		opts = {},
 	},
 	{
@@ -19,20 +10,38 @@ return {
 		config = true,
 	},
 	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup({
+				opts = {
+					-- Defaults
+					enable_close = true, -- Auto close tags
+					enable_rename = true, -- Auto rename pairs of tags
+					enable_close_on_slash = false, -- Auto close on trailing </
+				},
+			})
+		end,
+	},
+	{
 		"stevearc/conform.nvim",
 		opts = {
 			formatters_by_ft = {
+				-- Note: will not be using prettierd anymore due to it not being able
+				-- to detect plugins for some reason. Turns out it's a years old issue
+				-- and it has not been fixed to this day.
+
 				lua = { "stylua" },
 				rust = { "rustfmt" },
-				javascript = { "prettierd" },
-				typescript = { "prettierd" },
-				typescriptreact = { "prettierd" },
-				yaml = { "prettierd" },
-				json = { "prettierd" },
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
+				yaml = { "prettier" },
+				json = { "prettier" },
 				toml = { "tombi" },
-				css = { "prettierd" },
+				cpp = { "clang-format" },
+				css = { "prettier" },
 				cs = { "csharpier" },
-				markdown = { "prettierd" },
+				markdown = { "prettier" },
 				sh = { "shfmt" },
 
 				-- Installed globally via composer, not mason.
@@ -140,13 +149,6 @@ return {
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
-	},
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-		config = function()
-			vim.api.nvim_set_keymap("n", "<leader>md", ":RenderMarkdown toggle<CR>", { noremap = true, silent = true })
-		end,
 	},
 	{
 		"hat0uma/csvview.nvim",
