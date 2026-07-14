@@ -1,10 +1,45 @@
 [mgr]
 prepend_keymap = [
-  { on = "b", run = "plugin bunny", desc = "Start bunny.yazi" },
-  { on = "'", run = "plugin bunny fuzzy", desc = "Start bunny.yazi funny search" },
-  { on = "M", run = "plugin mount", desc = "Show mounted drives" },
-  { on = "<C-n>", run = '''
-  shell 'ripdrag "$@" -r 2>/dev/null &' --confirm
-  ''', desc = "Drag and drop selected files" },
-  # { on = ["g", "c"], run = "plugin vcs-files", desc = "Show Git file changes"}
+  { on = ["g", "M"], run = "plugin mount", desc = "Show mounted drives" },
+  { on = ["<C-n>"], run = '''shell 'ripdrag "$@" -r 2>/dev/null &' --confirm''', desc = "Drag and drop selected files" },
+
+  { on = ["g", "u"], run = "cd ~", desc = "Current User" },
+  { on = ["g", "t"], run = "cd ~/.local/share/Trash/files", desc = "Recycle Bin" },
+
+  { on = ["g", "d", "v"], run = "cd ~/dev", desc = "Developer" },
+  { on = ["g", "r", "s"], run = "cd ~/dev/rust-stuff", desc = "Rust Projects" },
+  { on = ["g", "r", "l"], run = "cd ~/dev/rust-stuff/rustlings", desc = "Rustlings" },
+  { on = ["g", "r", "n"], run = '''cd ~/Documents/Reader\'s\ Notebook''', desc = "Reader's Notebook" },
+
+  { on = ["g", "o"], run = "cd ~/.local/share/osu", desc = "osu!" },
+
+  { on = ["g", "d", "d"], run = "cd ~/Documents", desc = "Documents" },
+  { on = ["g", "d", "n"], run = "cd ~/Documents/Notes", desc = "Notes" },
+  { on = ["g", "d", "b"], run = "cd ~/Documents/Books", desc = "Books" },
+  { on = ["g", "d", "r"], run = "cd ~/Documents/Diary", desc = "Diary" },
+  { on = ["g", "d", "l"], run = "cd ~/Downloads", desc = "Downloads" },
+  { on = ["g", "d", "t"], run = "cd ~/.dotfiles", desc = "Dotfiles" },
+
+  { on = ["g", "p", "p"], run = "cd ~/Pictures", desc = "Pictures" },
+  { on = ["g", "p", "i"], run = "cd ~/Pictures/Instagram", desc = "Insta Brainrot" },
+  { on = ["g", "p", "a"], run = "cd ~/Pictures/Anime", desc = "Anime Pics" },
+  { on = ["g", "p", "c"], run = "cd ~/Pictures/Cath Stuff", desc = "Cath Stuff" },
+  { on = ["g", "p", "s"], run = "cd ~/Pictures/Screenshots", desc = "Screenshots" },
+
+  { on = ["g", "m", "m"], run = "cd ~/Music", desc = "Music" },
+
+  { on = ["g", "v", "v"], run = "cd ~/Videos", desc = "Videos" },
+  { on = ["g", "v", "d"], run = "cd ~/Videos/yt-dlp", desc = "yt-dlp vids" },
+  { on = ["g", "v", "y"], run = "cd ~/Videos/YouTube", desc = "YouTube" },
+
+  { on = ["g", "c", "c"], run = "cd ~/.config", desc = "Config Files" },
+  { on = ["g", "c", "y"], run = "cd ~/.config/yazi", desc = "Yazi Config" },
+  { on = ["g", "c", "r"], run = "cd ~/.config/rofi", desc = "Rofi Config" },
+  { on = ["g", "c", "h"], run = "cd ~/.config/hypr", desc = "Hypr Config" },
+  { on = ["g", "c", "n", "r"], run = "cd ~/.config/niri", desc = "Niri Config" },
+  { on = ["g", "c", "n", "v"], run = "cd ~/.config/nvim", desc = "Neovim Config" },
+
+  { on = ["g", "l", "s"], run = "cd ~/.local/share", desc = "Local share" },
+  { on = ["g", "l", "b"], run = "cd ~/.local/bin", desc = "Local bin" },
+  { on = ["g", "l", "t"], run = "cd ~/.local/state", desc = "Local state" },
 ]

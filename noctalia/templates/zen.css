@@ -1,0 +1,215 @@
+
+/* =========================
+   Tweaked Noctalia Theme
+   for Zen Browser
+   ========================= */
+
+/* --- Semantic Palette Layer --- */
+* {
+  --base:     {{ colors.background.default.hex }};
+  --surface:  {{ colors.surface.default.hex }};
+  --overlay:  {{ colors.tertiary.default.hex }};
+  --muted:    {{ colors.outline.default.hex }};
+  --text:     {{ colors.on_background.default.hex }};
+  --primary:  {{ colors.primary.default.hex }};
+  --secondary: {{ colors.secondary.default.hex }};
+  --on_primary: {{ colors.on_primary.default.hex }};
+}
+
+/* --- Zen Core Overrides --- */
+:root {
+  --zen-primary-color: var(--primary) !important;
+  --zen-colors-primary: var(--base) !important;
+  --zen-colors-secondary: var(--surface) !important;
+  --zen-colors-tertiary: var(--overlay) !important;
+  --zen-colors-border: var(--muted) !important;
+
+  --toolbar-bgcolor: var(--base) !important;
+  --zen-themed-toolbar-bg: var(--base) !important;
+  --zen-main-browser-background: var(--base) !important;
+  --zen-urlbar-background: var(--surface) !important;
+  --zen-colors-input-bg: var(--surface) !important;
+
+  --lwt-text-color: var(--text) !important;
+  --toolbar-color: var(--text) !important;
+  --toolbarbutton-icon-fill: var(--primary) !important;
+}
+
+/* =========================
+   App Background
+   ========================= */
+
+#zen-browser-background {
+  background-color: var(--base) !important;
+}
+
+#navigator-toolbox,
+#zen-tabbox-wrapper,
+#TabsToolbar,
+#zen-appcontent-navbar-container,
+#titlebar {
+  background: var(--base) !important;
+  color: var(--text) !important;
+}
+
+/* =========================
+   Sidebar (layered system)
+   ========================= */
+
+#zen-sidebar-splitter {
+  background: var(--overlay) !important;
+  opacity: 1 !important;
+}
+
+.sidebar-panel {
+  background: var(--base) !important;
+}
+
+.sidebar-placesTree {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* Workspaces / Zen UI blocks */
+#zen-workspaces-button {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* =========================
+   Tabs (important part)
+   ========================= */
+
+.tabbrowser-tab {
+  background: var(--base) !important;
+  color: var(--text) !important;
+  border-radius: 2px;
+}
+
+.tabbrowser-tab:hover {
+  background: none !important;
+  border-radius: 2px;
+}
+
+.tabbrowser-tab[selected="true"] {
+  background: var(--base) !important;
+  color: var(--text) !important;
+}
+
+.tab-background {
+  outline: none !important;
+}
+
+/* =========================
+   URL Bar (clean focus system)
+   ========================= */
+
+#urlbar-input-container,
+.urlbar-background {
+  background: var(--surface) !important;
+}
+
+#urlbar-input {
+  color: var(--text) !important;
+}
+
+#urlbar-input::selection {
+  background: var(--primary) !important;
+  color: var(--on_primary) !important;
+}
+
+.urlbarView-url {
+  color: var(--primary) !important;
+}
+
+#urlbar-results {
+  background: var(--overlay) !important;
+  color: var(--text) !important;
+}
+
+/* =========================
+   Toolbar buttons
+   ========================= */
+
+.toolbarbutton-1 {
+  color: var(--text) !important;
+}
+
+.toolbarbutton-1:hover {
+  background: var(--overlay) !important;
+  color: var(--primary) !important;
+}
+
+#back-button .toolbarbutton-icon,
+#forward-button .toolbarbutton-icon,
+#reload-button .toolbarbutton-icon,
+#stop-button .toolbarbutton-icon,
+#PanelUI-menu-button .toolbarbutton-icon,
+#unified-extensions-button .toolbarbutton-icon {
+  fill: var(--primary) !important;
+}
+
+/* =========================
+   Popups / Panels
+   ========================= */
+
+.zen-toast {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+#zen-toast-container {
+  color: var(--primary) !important;
+}
+
+#arrowpanel-background {
+  background: var(--overlay) !important;
+  color: var(--text) !important;
+}
+
+/* =========================
+   Bookmarks / Extras
+   ========================= */
+
+.content-shortcuts {
+  background: var(--surface) !important;
+  border-color: var(--muted) !important;
+}
+
+#zenEditBookmarkPanelFaviconContainer {
+  background: var(--base) !important;
+}
+
+/* =========================
+   Ctrl + F (Findbar) - Wallust Override
+   ========================= */
+
+findbar {
+  background-color: var(--base) !important;
+  color: var(--text) !important;
+  border-top: 1px solid var(--muted) !important;
+}
+
+.findbar-textbox {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+
+  /* override Firefox internal theme variables */
+  --input-bgcolor: var(--base) !important;
+  --input-color: var(--text) !important;
+  --input-border-color: var(--muted) !important;
+}
+
+.findbar-textbox:focus {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+
+  outline-color: var(--primary) !important;
+  box-shadow: none !important;
+}
+
+findbar,
+findbar .findbar-textbox:not([status="notfound"]) {
+  backdrop-filter: none !important;
+  background: var(--base) !important;
+}

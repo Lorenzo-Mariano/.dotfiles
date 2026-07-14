@@ -1,11 +1,11 @@
 -- Noctalia colors for Hyprland (auto-generated, do not edit)
 
-local primary = "rgb(ebdbb2)"
-local surface = "rgba(282828bf)"
-local secondary = "rgb(8ec07c)"
-local error_color = "rgb(fb4934)"
-local tertiary = "rgb(83a598)"
-local surface_lowest = "rgb(2c2b2a)"
+local primary = "rgb(ebbcba)"
+local surface = "rgba(191724bf)"
+local secondary = "rgb(9ccfd8)"
+local error_color = "rgb(eb6f92)"
+local tertiary = "rgb(31748f)"
+local surface_lowest = "rgb(1b1928)"
 
 hl.config({
 	general = {

@@ -33,7 +33,7 @@
         "preferredPlayer": "",
         "spectrumFrameRate": 60,
         "spectrumMirrored": true,
-        "visualizerType": "mirrored",
+        "visualizerType": "linear",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -108,12 +108,12 @@
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
                     "hideUnoccupied": true,
-                    "iconScale": 0.8,
+                    "iconScale": 1,
                     "id": "Workspace",
-                    "labelMode": "index",
+                    "labelMode": "name",
                     "occupiedColor": "secondary",
                     "pillSize": 0.6,
-                    "showApplications": false,
+                    "showApplications": true,
                     "showApplicationsHover": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
@@ -263,7 +263,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Nord",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -438,7 +438,7 @@
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
-        "telemetryEnabled": true
+        "telemetryEnabled": false
     },
     "hooks": {
         "colorGeneration": "",
@@ -499,7 +499,7 @@
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "5000"
+        "nightTemp": "4863"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -651,10 +651,6 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
                 "id": "qt"
             },
             {
@@ -691,10 +687,6 @@
             },
             {
                 "enabled": true,
-                "id": "hyprland"
-            },
-            {
-                "enabled": true,
                 "id": "mango"
             },
             {
@@ -704,13 +696,9 @@
             {
                 "enabled": true,
                 "id": "steam"
-            },
-            {
-                "enabled": true,
-                "id": "zenBrowser"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -775,33 +763,20 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "GruvboxAlt",
+                "colorScheme": "Catppuccin",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#ebdbb2",
-                    "#8ec07c",
-                    "#83a598",
-                    "#fb4934"
+                    "#cba6f7",
+                    "#fab387",
+                    "#94e2d5",
+                    "#f38ba8"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/Henriette Ronner-Knip - Cat_at_Play banger.png",
                 "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine Matte",
-                "darkMode": true,
-                "generationMethod": "content",
-                "paletteColors": [
-                    "#ebbcba",
-                    "#9ccfd8",
-                    "#31748f",
-                    "#eb6f92"
-                ],
-                "path": "/home/nyormensho/Pictures/Anime/FITTED - black is beautiful 76096803_p0 (Edited) banger.png",
-                "useWallpaperColors": false
-            },
-            {
                 "colorScheme": "Rose Pine Matte",
                 "darkMode": true,
                 "generationMethod": "content",
@@ -830,14 +805,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine Matte",
+                "colorScheme": "Nord",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#ebbcba",
-                    "#9ccfd8",
-                    "#31748f",
-                    "#eb6f92"
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/qosicart - banger bocchi the rock kessoku band sunset.jpg",
                 "useWallpaperColors": false
@@ -872,14 +847,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Nord",
+                "colorScheme": "GruvboxAlt",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#8fbcbb",
-                    "#88c0d0",
-                    "#5e81ac",
-                    "#bf616a"
+                    "#ebdbb2",
+                    "#8ec07c",
+                    "#83a598",
+                    "#fb4934"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/zareaa - banger gruvbox sheeesh perspective urban desolate 138197570_p0.jpg",
                 "useWallpaperColors": false
@@ -941,14 +916,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Nord",
+                "colorScheme": "Rose Pine Matte",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#8fbcbb",
-                    "#88c0d0",
-                    "#5e81ac",
-                    "#bf616a"
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/Muina - banger bocchi the rock hitori gotou futari gotou sailor uniform selfie bathroom 102978011_p0.jpg",
                 "useWallpaperColors": false
@@ -969,14 +944,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Rose Pine Matte",
+                "colorScheme": "Nord",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#ebbcba",
-                    "#9ccfd8",
-                    "#31748f",
-                    "#eb6f92"
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/Muina - bocchi the rock hitori gotou ijichi nijika ikuyo kita yamada ryo 105611646_p0.jpg",
                 "useWallpaperColors": false
@@ -1039,14 +1014,14 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Nord",
+                "colorScheme": "Rose Pine",
                 "darkMode": true,
                 "generationMethod": "content",
                 "paletteColors": [
-                    "#8fbcbb",
-                    "#88c0d0",
-                    "#5e81ac",
-                    "#bf616a"
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/chahu paopao - wuthering waves iuno moon 135311243_p0.jpg",
                 "useWallpaperColors": false
@@ -1064,6 +1039,174 @@
                 ],
                 "path": "/home/nyormensho/Pictures/Anime/FITTED - thing japan.jpg",
                 "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "GruvboxAlt",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebdbb2",
+                    "#8ec07c",
+                    "#83a598",
+                    "#fb4934"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - black is beautiful 76096803_p0 (Edited) banger.png",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "GruvboxAlt",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebdbb2",
+                    "#8ec07c",
+                    "#83a598",
+                    "#fb4934"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/Calder Moore - artstation sushi.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/emudotto (m.) - sleepy banger nord.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine Matte",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED xilmo - kobeni cinema chainsaw man banger.png",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/Miv4t - 98646512_p0.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - this is how winter should look nord.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/@nierzhu - banger bocchi the rock hitori gotou ijichi nijika nord GgQZIWUaYAAA0gM.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/cucucucucumber0 - catppuccin monogatari oshino shinobu.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - under the night sky by bisbiswas ddfk819 catppuccin full view.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - Bridge Catppuccin.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Nord",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#8fbcbb",
+                    "#88c0d0",
+                    "#5e81ac",
+                    "#bf616a"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - nord mountains banger 5748285.jpg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Rose Pine",
+                "darkMode": true,
+                "generationMethod": "content",
+                "paletteColors": [
+                    "#ebbcba",
+                    "#9ccfd8",
+                    "#31748f",
+                    "#eb6f92"
+                ],
+                "path": "/home/nyormensho/Pictures/Anime/FITTED - unimikan sunset gruvbox banger.png",
+                "useWallpaperColors": false
             }
         ],
         "fillColor": "#262626",
@@ -1077,7 +1220,7 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": false,
+        "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",

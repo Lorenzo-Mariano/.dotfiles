@@ -21,27 +21,7 @@ binds {
     // Apps
     Mod+E hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Y hotkey-overlay-title="Open yazi" { spawn-sh "kitty --hold yazi"; }
-
-    // System Controls
-    Mod+SemiColon hotkey-overlay-title="Open noctalia settings" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-    // Mod+Space hotkey-overlay-title="Open noctalia launcher" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+Space hotkey-overlay-title="Open rofi launcher" { spawn "~/.config/rofi/launcher.sh"; }
-    Mod+Grave hotkey-overlay-title="Lock the Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
-
-    // Media Controls
-    XF86AudioPrev { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "previous"; }
-    XF86AudioPlay { spawn  "qs" "-c" "noctalia-shell" "ipc" "call" "media" "playPause" ;}
-    XF86AudioNext { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "media" "next"; }
-
-    // Volume & Mic Controls
-    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
-    XF86AudioMicMute { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteInput"; }
-
-    // Brightness controls
-    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
     // Window Management
     Mod+O repeat=false { toggle-overview; }
@@ -95,8 +75,8 @@ binds {
     Mod+Ctrl+F { expand-column-to-available-width; }
 
     // "1000", "+20", "10%", "+10%"
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Mod+U { set-column-width "-10%"; }
+    Mod+P { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 

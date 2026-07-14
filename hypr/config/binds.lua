@@ -67,5 +67,5 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.bind(mainMod .. " + P", hl.dsp.window.resize({ x = resizeStep, y = 0, relative = true }))
 hl.bind(mainMod .. " + U", hl.dsp.window.resize({ x = -resizeStep, y = 0, relative = true }))
-hl.bind(mainMod .. " + O", hl.dsp.window.resize({ x = 0, y = resizeStep, relative = true }))
-hl.bind(mainMod .. " + I", hl.dsp.window.resize({ x = 0, y = -resizeStep, relative = true }))
+hl.bind(mainMod .. " + I", hl.dsp.window.resize({ x = 0, y = resizeStep, relative = true }))
+hl.bind(mainMod .. " + O", hl.dsp.window.resize({ x = 0, y = -resizeStep, relative = true }))

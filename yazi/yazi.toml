@@ -1,5 +1,5 @@
 [mgr]
-ratio = [1, 2, 2]
+ratio = [0, 2, 3]
 show_hidden = true
 linemode = "btime"
 show_symlink = true
@@ -8,52 +8,39 @@ show_symlink = true
 wrap = "yes"
 max_width = 9000
 max_height = 9000
+image_filter = "triangle"
 image_quality = 50
 
 [opener]
 run = [{ run = 'setsid "$@"', orphan = true }]
 write = [{ run = 'soffice "$@"', orphan = true }]
-watch = [{ run = 'showtime "$@"', orphan = true }]
+watch = [{ run = 'mpv "$@"', orphan = true }]
 view = [{ run = 'loupe "$@"', orphan = true }]
 listen = [{ run = 'decibels "$@"', orphan = true }]
 read = [
+  { run = 'okular "$@"', orphan = true },
   { run = 'papers "$@"', orphan = true },
   { run = 'readest "$@"', orphan = true }
 ]
+set-wallpaper = [{ run = 'awww img "$@"', orphan = true }]
 
 [open]
 prepend_rules = [
-  # running guis n shi
-  { name = "*.AppImage", use = "run" },
-  # pics
-  { name = "*.jpg", use = "view" },
-  { name = "*.jpeg", use = "view" },
-  { name = "*.png", use = "view" },
-  { name = "*.webp", use = "view" },
-  # audio
-  { name = "*.aac", use = "listen" },
-  { name = "*.mp3", use = "listen" },
-  { name = "*.m4a", use = "listen" },
-  { name = "*.wav", use = "listen" },
-  { name = "*.ogg", use = "listen" },
-  { name = "*.flac", use = "listen" },
-  # Vids
-  { name = "*.mp4", use = "watch" },
-  { name = "*.mkv", use = "watch" },
-  { name = "*.webm", use = "watch" },
-  { name = "*.avi", use = "watch" },
-  # docs
-  { name = "*.pdf", use = "read" },
-  { name = "*.epub", use = "read" },
-  { name = "*.docx", use = "write" },
-  { name = "*.odt", use = "write" },
-
-  # Multiple openers for a single rule
-  # { name = "*.html", use = [ "open", "edit" ] },
+  { url = "*.AppImage", use = ["run"] },
+  { mime = "image/*", use = ["view", "set-wallpaper"] },
+  { mime = "audio/*", use = ["listen"] },
+  { mime = "video/*", use = ["watch"] },
+  { mime = "application/pdf", use = ["read"] },
+  { mime = "application/epub+zip", use = ["read"] },
+  # docx
+  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", use = [
+    "write"
+  ] },
+  { url = "*.odt", use = ["write"] },
 ]
 
 [plugin]
 prepend_fetchers = [
-  { id = "git", name = "*", run = "git" },
-  { id = "git", name = "*/", run = "git" },
+  { id = "git", url = "*", run = "git", group = "git" },
+  { id = "git", url = "*/", run = "git", group = "git" },
 ]

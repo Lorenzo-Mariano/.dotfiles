@@ -1,8 +1,26 @@
 [config]
 
 [templates]
-
 [templates.hyprland]
-input_path = "~/.config/noctalia/templates/noctalia.conf"
-output_path = "~/.config/hypr/noctalia.conf"
-post_hook = "hyprctl reload"
+input_path = "~/.config/noctalia/templates/hyprland.lua"
+output_path = "~/.config/hypr/noctalia/colors.lua"
+
+[templates.rofi]
+input_path = "~/.config/noctalia/templates/rofi.rasi"
+output_path = "~/.config/rofi/shared/noctalia-colors.rasi"
+post_hook = ""
+
+[templates.zen]
+input_path = "~/.config/noctalia/templates/zen.css"
+output_path = "~/.zen/fdj5cutv.Default (release)/chrome/noctalia.css"
+post_hook = '''echo '@import url("noctalia.css")' >|"$HOME/.zen/fdj5cutv.Default (release)/chrome/userChrome.css"'''
+
+[templates.gtk3]
+input_path = "~/.config/noctalia/templates/gtk3.css"
+output_path = "~/.config/gtk-3.0/noctalia.css"
+post_hook = '''echo '@import url("noctalia.css")' >|"$HOME/.config/gtk-3.0/gtk.css"'''
+
+[templates.gtk4]
+input_path = "~/.config/noctalia/templates/gtk4.css"
+output_path = "~/.config/gtk-4.0/noctalia.css"
+post_hook = '''echo '@import url("noctalia.css")' >|"$HOME/.config/gtk-4.0/gtk.css"'''

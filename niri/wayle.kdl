@@ -1,0 +1,16 @@
+spawn-at-startup "wayle" "shell"
+spawn-at-startup "awww-daemon"
+
+binds {
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+1%" ; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "1%-" ; }
+
+    XF86AudioRaiseVolume { spawn "wayle" "audio" "output-volume" "+1"; }
+    XF86AudioLowerVolume { spawn "wayle" "audio" "output-volume" "-1"; }
+    XF86AudioMute { spawn "wayle" "audio" "output-mute"; }
+
+    XF86AudioNext { spawn "wayle" "media" "next"; }
+    XF86AudioPause { spawn "wayle" "media" "play-pause"; }
+    XF86AudioPlay { spawn "wayle" "media" "play-pause"; }
+    XF86AudioPrev { spawn "wayle" "media" "previous"; }
+}

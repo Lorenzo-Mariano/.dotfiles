@@ -1,0 +1,36 @@
+layout {
+
+    focus-ring {
+        active-color   "{{ color6 }}"
+        inactive-color "{{ color0 }}"
+        urgent-color   "{{ color1 }}"
+    }
+
+    border {
+        active-color   "{{ color6 }}"
+        inactive-color "{{ color0 }}"
+        urgent-color   "{{ color1 }}"
+    }
+
+    shadow {
+        color "{{ color0 }}70"
+    }
+
+    tab-indicator {
+        active-color   "{{ color3 }}"
+        inactive-color "{{ color8 }}"
+        urgent-color   "{{ color1 }}"
+    }
+
+    insert-hint {
+        color "{{ color6 }}80"
+    }
+}
+
+recent-windows {
+    highlight {
+        active-color "{{ color6 }}"
+        urgent-color "{{ color1 }}"
+    }
+}
+

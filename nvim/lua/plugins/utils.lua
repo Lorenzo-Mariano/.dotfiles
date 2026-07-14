@@ -3,63 +3,6 @@ return {
 		"williamboman/mason.nvim",
 		opts = {},
 	},
-	-- {
-	-- 	"razak17/tailwind-fold.nvim",
-	-- 	opts = {},
-	-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
-	-- 	ft = { "html", "svelte", "astro", "vue", "typescriptreact", "php", "blade" },
-	-- },
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		opts = {
-			filetypes = {
-				sh = function()
-					if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
-						return false
-					end
-					return true
-				end,
-			},
-		},
-	},
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		cmd = "CopilotChat",
-		dependencies = {
-			{ "zbirenbaum/copilot.lua" },
-			{ "nvim-lua/plenary.nvim", branch = "master" },
-		},
-		config = function()
-			require("CopilotChat").setup({
-				-- https://docs.github.com/en/copilot/reference/ai-models/model-comparison
-				-- model = "claude-3.7-sonnet", -- Default model to use, see ':CopilotChatModels' for available models (can be specified manually in prompt via $).
-				model = "gpt-5-mini",
-				selection = function(source)
-					local select = require("CopilotChat.select")
-					return select.visual(source)
-				end,
-				window = {
-					layout = "float",
-					height = 0.75,
-					width = 0.75,
-				},
-				mappings = {
-					submit_prompt = {
-						normal = "<M-s>",
-						insert = "<M-s>",
-					},
-					reset = {
-						normal = "<C-x>",
-						insert = "<C-x>",
-					},
-				},
-			})
-
-			local map = vim.api.nvim_set_keymap
-			map("n", "<leader>cc", ":CopilotChatToggle<CR>", { noremap = true, silent = true })
-		end,
-	},
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {},
@@ -74,10 +17,7 @@ return {
 			local lint = require("lint")
 
 			lint.linters_by_ft = {
-				-- configs
 				yaml = { "yamllint" },
-
-				-- programming
 				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
 				javascriptreact = { "eslint_d" },
@@ -85,17 +25,6 @@ return {
 				python = { "pylint" },
 				markdown = { "rumdl" },
 			}
-
-			-- Wrap and override eslint_d parser to suppress config file missing error
-			local eslint_d = require("lint.linters.eslint_d")
-			local original_parser = eslint_d.parser
-
-			eslint_d.parser = function(output, bufnr)
-				if output:match("Could not find config file") then
-					return {}
-				end
-				return original_parser(output, bufnr)
-			end
 
 			vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
 				callback = function()
@@ -209,15 +138,5 @@ return {
 		config = function()
 			require("blame").setup({})
 		end,
-	},
-	{
-		"OlegGulevskyy/better-ts-errors.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		config = {
-			keymaps = {
-				toggle = "<leader>dd", -- default '<leader>dd'
-				go_to_definition = "<leader>dx", -- default '<leader>dx'
-			},
-		},
 	},
 }

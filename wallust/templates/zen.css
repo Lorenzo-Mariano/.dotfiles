@@ -38,6 +38,10 @@
    App Background
    ========================= */
 
+#zen-browser-background {
+  background-color: var(--base) !important;
+}
+
 #navigator-toolbox,
 #zen-tabbox-wrapper,
 #TabsToolbar,

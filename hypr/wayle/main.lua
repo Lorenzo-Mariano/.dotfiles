@@ -1,12 +1,12 @@
+require("wayle/colors")
+
 hl.on("hyprland.start", function()
 	hl.exec_cmd("wayle shell")
 	hl.exec_cmd("awww-daemon")
-	hl.exec_cmd(
-		"awww img '/home/nyormensho/Pictures/Anime/FITTED - xilmo - 2girls waterfront bench black sailor uniform gruvbox maybe 144475675_p0 (Edited)_1.png'"
-	)
 end)
 
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot_region.sh"))
+hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("~/Projects/dev/qylock/quickshell-lockscreen/lock.sh"))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wayle audio output-volume +1"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wayle audio output-volume -1"))

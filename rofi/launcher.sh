@@ -21,6 +21,7 @@ dir="$HOME/.config/rofi/"
 # theme='famine'
 # theme='gruvbox'
 theme='wallust'
+# theme='noctalia'
 
 ## Run
 rofi \
