@@ -20,12 +20,44 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- todo: modify blink somehow to de-prioritize emmet snippets in favor of tsgo and shi
+local lean_mode = {
+	require("plugins.utils.mason"),
+	require("plugins.utils.mason-lspconfig"),
+	require("plugins.utils.nvim-lint"),
+
+	require("plugins.ui.telescope"),
+	require("plugins.ui.minifiles"),
+
+	require("plugins.editing.nvim-highlight-colors"),
+	require("plugins.editing.blink"),
+	require("plugins.editing.conform"),
+	require("plugins.editing.nvim-autopairs"),
+
+	require("plugins.themes"),
+}
+
+local full_fat = {
+	lean_mode,
+	require("plugins.utils.toggleterm"),
+	require("plugins.utils.blame"),
+	require("plugins.utils.git-conflict"),
+	require("plugins.utils.gitsigns"),
+
+	require("plugins.ui.lualine"),
+	require("plugins.ui.neoscroll"),
+	require("plugins.ui.noice"),
+	require("plugins.ui.which-key"),
+
+	require("plugins.editing.live-preview"),
+	require("plugins.editing.nvim-ts-autotag"),
+	require("plugins.editing.tree-sitter-manager"),
+}
+
 require("lazy").setup({
 	spec = {
-		require("plugins.ui"),
-		require("plugins.editing"),
-		require("plugins.utils"),
-		require("plugins.themes"),
+		lean_mode,
+		-- full_fat,
 	},
 	install = { colorscheme = { "nord" } },
 	-- automatically check for plugin updates
