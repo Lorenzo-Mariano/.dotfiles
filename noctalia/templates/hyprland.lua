@@ -10,7 +10,14 @@ local surface_lowest = "rgb({{colors.surface_container_lowest.default.hex_stripp
 hl.config({
 	general = {
 		col = {
-			active_border = primary,
+			active_border = {
+				colors = {
+					primary,
+					secondary,
+					tertiary,
+					error_color,
+				},
+			},
 			inactive_border = surface,
 		},
 	},
