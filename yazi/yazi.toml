@@ -12,17 +12,21 @@ image_filter = "triangle"
 image_quality = 50
 
 [opener]
-run = [{ run = 'setsid "$@"', orphan = true }]
-write = [{ run = 'soffice "$@"', orphan = true }]
-watch = [{ run = 'mpv "$@"', orphan = true }]
-view = [{ run = 'loupe "$@"', orphan = true }]
-listen = [{ run = 'decibels "$@"', orphan = true }]
-read = [
-  { run = 'okular "$@"', orphan = true },
-  { run = 'papers "$@"', orphan = true },
-  { run = 'readest "$@"', orphan = true }
-]
-set-wallpaper = [{ run = 'awww img "$@"', orphan = true }]
+run = [{ run = "setsid %S", orphan = true }]
+write = [{ run = "soffice %S", orphan = true }]
+watch = [{ run = "mpv %S", orphan = true }]
+view = [{ run = "loupe %S", orphan = true }]
+listen = [{ run = "decibels %S", orphan = true }]
+read = [{ run = "okular %S", orphan = true }, { run = "papers %S", orphan = true }, { run = "readest %S", orphan = true }]
+set-wallpaper = [{ run = "awww img %S", orphan = true }]
+
+# run = [{ run = 'setsid "$@"', orphan = true }]
+# write = [{ run = 'soffice "$@"', orphan = true }]
+# watch = [{ run = 'mpv "$@"', orphan = true }]
+# view = [{ run = 'loupe "$@"', orphan = true }]
+# listen = [{ run = 'decibels "$@"', orphan = true }]
+# read = [{ run = 'okular "$@"', orphan = true }, { run = 'papers "$@"', orphan = true }, { run = 'readest "$@"', orphan = true }]
+# set-wallpaper = [{ run = 'awww img "$@"', orphan = true }]
 
 [open]
 prepend_rules = [
@@ -33,14 +37,13 @@ prepend_rules = [
   { mime = "application/pdf", use = ["read"] },
   { mime = "application/epub+zip", use = ["read"] },
   # docx
-  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", use = [
-    "write"
-  ] },
+  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", use = ["write"] },
   { url = "*.odt", use = ["write"] },
 ]
 
 [plugin]
-prepend_fetchers = [
-  { id = "git", url = "*", run = "git", group = "git" },
-  { id = "git", url = "*/", run = "git", group = "git" },
-]
+# prepend_fetchers = [
+#   { id = "git", url = "*", run = "git", group = "git" },
+#   { id = "git", url = "*/", run = "git", group = "git" },
+# ]
+prepend_previewers = [{ mime = "application/epub+zip", run = "epub-preview" }]

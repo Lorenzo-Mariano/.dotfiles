@@ -6,9 +6,9 @@ prepend_keymap = [
   { on = ["g", "u"], run = "cd ~", desc = "Current User" },
   { on = ["g", "t"], run = "cd ~/.local/share/Trash/files", desc = "Recycle Bin" },
 
-  { on = ["g", "d", "v"], run = "cd ~/dev", desc = "Developer" },
-  { on = ["g", "r", "s"], run = "cd ~/dev/rust-stuff", desc = "Rust Projects" },
-  { on = ["g", "r", "l"], run = "cd ~/dev/rust-stuff/rustlings", desc = "Rustlings" },
+  { on = ["g", "d", "v"], run = "cd ~/Projects/dev", desc = "Developer" },
+  { on = ["g", "r", "s"], run = "cd ~/Projects/dev/learn-rust", desc = "Rust Projects" },
+  { on = ["g", "r", "l"], run = "cd ~/Projects/dev/learn-rust/rustlings", desc = "Rustlings" },
   { on = ["g", "r", "n"], run = '''cd ~/Documents/Reader\'s\ Notebook''', desc = "Reader's Notebook" },
 
   { on = ["g", "o"], run = "cd ~/.local/share/osu", desc = "osu!" },
@@ -23,7 +23,7 @@ prepend_keymap = [
   { on = ["g", "p", "p"], run = "cd ~/Pictures", desc = "Pictures" },
   { on = ["g", "p", "i"], run = "cd ~/Pictures/Instagram", desc = "Insta Brainrot" },
   { on = ["g", "p", "a"], run = "cd ~/Pictures/Anime", desc = "Anime Pics" },
-  { on = ["g", "p", "c"], run = "cd ~/Pictures/Cath Stuff", desc = "Cath Stuff" },
+  { on = ["g", "p", "c"], run = "cd ~/Pictures/Catholic", desc = "Cath Stuff" },
   { on = ["g", "p", "s"], run = "cd ~/Pictures/Screenshots", desc = "Screenshots" },
 
   { on = ["g", "m", "m"], run = "cd ~/Music", desc = "Music" },
